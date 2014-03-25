@@ -16,6 +16,7 @@ using LiteDevelop.Gui.Forms;
 using LiteDevelop.Gui.DockContents;
 using LiteDevelop.Gui.DockContents.SolutionExplorer;
 using LiteDevelop.Framework.Gui;
+using LiteDevelop.Framework;
 
 namespace LiteDevelop
 {
@@ -68,6 +69,12 @@ namespace LiteDevelop
         public MuiProcessor MuiProcessor
         {
             get { return _muiProcessor; }
+        }
+
+        public void EnsureAppDataDirectoryIsCreated()
+        {
+            if (!Directory.Exists(Constants.AppDataDirectory))
+                Directory.CreateDirectory(Constants.AppDataDirectory);
         }
 
         public void Start(string[] args)

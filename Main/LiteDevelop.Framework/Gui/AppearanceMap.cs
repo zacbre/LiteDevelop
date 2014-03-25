@@ -88,9 +88,13 @@ namespace LiteDevelop.Framework.Gui
 
         public void CopyTo(AppearanceMap destination)
         {
+            destination.Descriptions.Clear();
+            
             for (int i = 0; i < Descriptions.Count; i++)
             {
-                this.Descriptions[i].CopyTo(destination.Descriptions[i]);
+                var description = new AppearanceDescription();
+                this.Descriptions[i].CopyTo(description);
+                destination.Descriptions.Add(description);
             }
         }
 

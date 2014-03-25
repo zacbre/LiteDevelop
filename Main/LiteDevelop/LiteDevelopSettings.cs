@@ -58,6 +58,8 @@ namespace LiteDevelop
         
         public static void Reset()
         {
+
+            LiteDevelopApplication.Current.EnsureAppDataDirectoryIsCreated();
             Instance = Default.Clone() as LiteDevelopSettings;
             Instance.Save();
         }
