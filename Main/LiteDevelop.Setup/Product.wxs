@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <Product Id="*" Name="LiteDevelop" Language="1033" Version="1.0.0.0" Manufacturer="Jerre S." UpgradeCode="757826ea-7de8-4599-89b0-eb83259435b9">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+
+    <Property Id="WIXUI_INSTALLDIR">INSTALLDIR</Property>
+    
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.SolutionDir)\License.rtf" />
+    <WixVariable Id="WixUIBannerBmp" Value="Media\Banner.bmp" />
+    <WixVariable Id="WixUIDialogBmp" Value="Media\Dialog.bmp" />
+
+    <Property Id="ARPPRODUCTICON">LiteDevelopIcon.exe</Property>
+    <Icon Id="LiteDevelopIcon.exe" SourceFile="$(var.LiteDevelop.TargetPath)"/>
+    
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+    <MediaTemplate EmbedCab = "yes"  CompressionLevel = "high"/>
+
+    <UI>
+      <UIRef Id="WixUI_FeatureTree"/>
+    </UI>
+    
+    <Feature Id="CompleteInstallation" 
+             Title="Complete Installation" 
+             InstallDefault="local"
+             Display="expand"
+             AllowAdvertise="no"
+             ConfigurableDirectory="INSTALLDIR">
+      
+      <Feature Id="LiteDevelopComponents" 
+               Title="Main application and files" 
+               Description="Installs the application and essential files to run LiteDevelop."     
+               Absent="disallow"
+               InstallDefault="local"
+               AllowAdvertise="no"
+               Display="expand">
+        
+        <!-- Root directory files -->
+        <ComponentRef Id = "LicenseRtf" />
+        <ComponentRef Id = "LiteDevelopExe" />
+        <ComponentRef Id = "ApplicationShortcut" />
+        <ComponentRef Id = "LiteDevelopPdb" />
+        <ComponentRef Id = "LiteDevelopFrameworkDll" />
+        <ComponentRef Id = "LiteDevelopFrameworkPdb" />
+        <ComponentRef Id = "LiteDevelopFrameworkXml" />
+        <ComponentRef Id = "LiteDevelopMSBuildExe" />
+        <ComponentRef Id = "LiteDevelopMSBuildPdb" />
+        <ComponentRef Id = "DockPanelSuiteDll" />
+        
+        <!-- Language files -->
+        <ComponentRef Id = "CSharpLanguageFile" />
+        <ComponentRef Id = "VisualBasicLanguageFile" />
+        <ComponentRef Id = "CssLanguageFile" />
+        <ComponentRef Id = "HtmlLanguageFile" />
+        <ComponentRef Id = "PhpLanguageFile" />
+
+        <ComponentRef Id = "LanguagesXml" />
+        <ComponentRef Id = "MainAppEnglishMuiFile" />
+        <ComponentRef Id = "MainAppDefaultAppearanceXml"/>
+        <ComponentRef Id = "MainAppDefaultSettingsXml"/>
+
+        <!-- Help files -->
+        <Feature Id="FrameworkDocumentation"
+                 Title="Framework documentation"
+                 Description="Adds help files containing class definitions and documentation of LiteDevelop.Framework.dll."
+                 InstallDefault="local"
+                 AllowAdvertise="no">
+          <ComponentRef Id="LiteDevelopFrameworkChm" />
+        </Feature>
+        
+        <!-- Additional MUI files -->
+        <Feature Id="MainMuiFiles"
+                 Title="Additional MUI files"
+                 Description="Installs additional multilingual user interface (MUI) language packs for the main application."
+                 InstallDefault="local"
+                 AllowAdvertise="no">
+          
+          <Feature Id = "MainAppDutchMuiFeature" Title = "Dutch">
+            <ComponentRef Id = "MainAppDutchMuiFile"/>
+          </Feature>
+          <!--
+          <Feature Id = "MainAppFinnishMuiFeature" Title = "Finnish">
+            <ComponentRef Id = "MainAppFinnishMuiFile"/>
+          </Feature>
+          <Feature Id = "MainAppFrenchMuiFeature" Title = "French">
+            <ComponentRef Id = "MainAppFrenchMuiFile"/>
+          </Feature>
+          <Feature Id = "MainAppGermanMuiFeature" Title = "German">
+            <ComponentRef Id = "MainAppGermanMuiFile"/>
+          </Feature>
+          <Feature Id = "MainAppNorwegianMuiFeature" Title = "Norwegan">
+            <ComponentRef Id = "MainAppNorwegianMuiFile"/>
+          </Feature>
+          <Feature Id = "MainAppSpanishMuiFeature" Title = "Spanish">
+            <ComponentRef Id = "MainAppSpanishMuiFile"/>
+          </Feature>
+          <Feature Id = "MainAppSwedishMuiFeature" Title = "Swedish">
+            <ComponentRef Id = "MainAppSwedishMuiFile"/>
+          </Feature>
+          -->
+          <Feature Id = "MainAppPirateTalkMuiFeature" Title = "Pirate Talk">
+            <ComponentRef Id = "MainAppPirateTalkMuiFile"/>
+          </Feature>
+          <!--
+          <Feature Id = "MainAppRussianMuiFeature" Title = "Russian">
+            <ComponentRef Id = "MainAppRussianMuiFile"/>
+          </Feature>
+          -->
+        </Feature>
+        
+      </Feature>
+      
+      <!-- Essentials -->
+      <Feature Id="EssentialFeatures" 
+               Title="Essential features"
+               Description="Installs default features of LiteDevelop, such as the code editor and forms designer."
+               Display="expand">
+        <ComponentRef Id = "LiteDevelopEssentialsDll" />
+        <ComponentRef Id = "LiteDevelopEssentialsPdb" />
+        <ComponentRef Id = "FastColoredTextBoxDll" />
+        <ComponentRef Id = "FastColoredTextBoxPdb" />
+        <ComponentRef Id = "FastColoredTextBoxXml" />
+        <ComponentRef Id = "EssentialsEnglishMuiFile" />
+        <ComponentRef Id = "CodeEditorDefaultAppearanceXml"/>
+        <ComponentRef Id = "CodeEditorDefaultSettingsXml"/>
+
+        <!-- Additional MUI files -->
+        <Feature Id="EssentialsMuiFiles"
+                 Title="Additional MUI files"
+                 Description="Installs additional multilingual user interface (MUI) language packs for the default features."
+                 InstallDefault="local"
+                 AllowAdvertise="no">
+
+          <Feature Id = "EssentialsDutchMuiFeature" Title = "Dutch">
+            <ComponentRef Id = "EssentialsDutchMuiFile"/>
+          </Feature>
+          <!--
+          <Feature Id = "EssentialsFinnishMuiFeature" Title = "Finnish">
+            <ComponentRef Id = "EssentialsFinnishMuiFile"/>
+          </Feature>
+          <Feature Id = "EssentialsFrenchMuiFeature" Title = "French">
+            <ComponentRef Id = "EssentialsFrenchMuiFile"/>
+          </Feature>
+          <Feature Id = "EssentialsGermanMuiFeature" Title = "German">
+            <ComponentRef Id = "EssentialsGermanMuiFile"/>
+          </Feature>
+          <Feature Id = "EssentialsNorwegianMuiFeature" Title = "Norwegian">
+            <ComponentRef Id = "EssentialsNorwegianMuiFile"/>
+          </Feature>
+          <Feature Id = "EssentialsSpanishMuiFeature" Title = "Spanish">
+            <ComponentRef Id = "EssentialsSpanishMuiFile"/>
+          </Feature>
+          <Feature Id = "EssentialsSwedishMuiFeature" Title = "Swedish">
+            <ComponentRef Id = "EssentialsSwedishMuiFile"/>
+          </Feature>
+          -->
+          <Feature Id = "EssentialsPirateTalkMuiFeature" Title = "Pirate Talk">
+            <ComponentRef Id = "EssentialsPirateTalkMuiFile"/>
+          </Feature>
+          <!--
+          <Feature Id = "EssentialsRussianMuiFeature" Title = "Dutch">
+            <ComponentRef Id = "EssentialsRussianMuiFile"/>
+          </Feature>
+          -->
+        </Feature>
+      </Feature>
+
+		</Feature>
+  
+	</Product>
+</Wix>

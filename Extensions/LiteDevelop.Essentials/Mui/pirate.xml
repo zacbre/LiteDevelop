@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<UILanguagePack>
+
+  <!-- 
+  ==================================
+  Code editor 
+  ==================================
+  -->
+
+  <ItemGroup Id = "CodeEditorControl">
+    <ItemGroup Id = "ContextMenu">
+      <Item Id = "Cut">Cut</Item>
+      <Item Id = "Copy">Copy</Item>
+      <Item Id = "Paste">Paste</Item>
+      <Item Id = "SelectAll">Select All</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id = "CodeEditorExtension">
+    <Item Id = "GeneralSettings">General</Item>
+    <Item Id = "AutoCompleteSettings">Booty map completion</Item>
+    <ItemGroup Id = "Toolbar">
+      <Item Id = "ShowSuggestions">Show booties</Item>
+      <Item Id = "CommentRegion">Comment region</Item>
+      <Item Id = "UncommentRegion">Uncomment region</Item>
+    </ItemGroup>
+    <ItemGroup Id = "Statusbar">
+      <Item Id = "CurrentLine">Line $(line)</Item>
+      <Item Id = "CurrentColumn">Column $(column)</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id = "GeneralSettingsControl">
+    <Item Id = "ShowLineNumbers">Show numbers o' lines</Item>
+    <Item Id = "WordWrap">Word wrap</Item>
+    <Item Id = "SyntaxHighlighting">Highlightin' o' syntax</Item>
+    <Item Id = "TrackUnsavedChanges">Track mangled changes</Item>
+    <Item Id = "HighlightCurrentLine">Highlight current coordinates</Item>
+    <Item Id = "ShowDocumentMiniMap">Show mini map o' document</Item>
+  </ItemGroup>
+
+  <ItemGroup Id = "AutoCompleteSettingsControl">
+    <ItemGroup Id = "AutoListMembers">
+      <Item Id = "Title">Auto list booties</Item>
+      <ItemGroup Id = "PopupTime">
+        <Item Id = "Title">Show booty list when:</Item>
+        <Item Id = "TypingAnyChar">typin' any character</Item>
+        <Item Id = "PressingCtrlSpace">pressin' Ctrl+Space</Item>
+      </ItemGroup>
+      <Item Id = "CommitItemOnKeyChars">Commit selected booty when pressin' one o' the followin' characters:</Item>
+      <Item Id = "CommitItemOnSpaceBar">Commit selected booty when pressin' the space bar</Item>
+    </ItemGroup>
+    <Item Id = "AutoCompleteCodeBlocks">Auto complete code blocks (e.g. ( ) [ ] " " ' ')</Item>
+    <Item Id = "AutoAddParantheses">Auto add method parantheses when a method suggestion be inserted.</Item>
+  </ItemGroup>
+
+</UILanguagePack>

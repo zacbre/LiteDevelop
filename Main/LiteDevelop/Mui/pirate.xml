@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<UILanguagePack>
+
+  <!-- 
+  ==================================
+  Main application 
+  ==================================
+  -->
+  
+  <ItemGroup Id="Common">
+    <Item Id="Ok">Aye!</Item>
+    <Item Id="Close">Belay</Item>
+    <Item Id="Cancel">Avast!</Item>
+    <Item Id="Yes">Aye!</Item>
+    <Item Id="No">Nay</Item>
+    <Item Id="Add">Add</Item>
+    <Item Id="Remove">Remove</Item>
+    <Item Id="Browse">Scour</Item>
+    <Item Id="None">None</Item>
+    <Item Id="Name">Name:</Item>
+    <Item Id="Directory">Deck:</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="AboutDialog">
+    <Item Id="Title">About</Item>
+    <Item Id="ProjectFounder">Project admiral:</Item>
+    <Item Id="Version">Version:</Item>
+    <Item Id="Repository">Home port:</Item>
+    <ItemGroup Id="ModuleListHeaders">
+      <Item Id="Module">Module</Item>
+      <Item Id="Version">Version</Item>
+    </ItemGroup>
+    <ItemGroup Id="ExtensionDetails">
+      <Item Id="Name">Ship's name</Item>
+      <Item Id="Version">Version</Item>
+      <Item Id="Path">Path</Item>
+      <Item Id="Author">Captain</Item>
+      <Item Id="Description">Description</Item>
+      <Item Id="Copyright">Copyright</Item>
+      <Item Id="AdditionalReleaseInformation">Additional release information</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id="AppearanceEditor">
+    <Item Id="Extensions">Extensions</Item>
+
+    <ItemGroup Id="ListHeaders">
+      <Item Id="Key">Key</Item>
+      <Item Id="Preview">Preview</Item>
+    </ItemGroup>
+
+    <ItemGroup Id="Editor">
+      <Item Id="ForeColor">Fore paint:</Item>
+      <Item Id="BackColor">Ship's paint:</Item>
+      <Item Id="Transparent">Transparent</Item>
+      <Item Id="Bold">Bold</Item>
+      <Item Id="Italic">Italic</Item>
+      <Item Id="Underline">Underline</Item>
+      <Item Id="Strikeout">Strikeout</Item>
+    </ItemGroup>
+  </ItemGroup>
+  
+  <ItemGroup Id="CreateFileDialog">
+    <Item Id="Title">Create new ship part</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="CreateProjectDialog">
+    <Item Id="Title">Create new ship</Item>
+    <Item Id="FolderAlreadyExists">$(folder) be existin' already. Ye still want to continue?</Item>
+    <Item Id="FileAlreadyExists">$(file) be existin' alreadys. Overwrite?</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="ErrorContent">
+    <Item Id="Title">Leak list</Item>
+    <ItemGroup Id ="Toolbar">
+      <Item Id="Errors">$(count) Leaks</Item>
+      <Item Id="Warnings">$(count) Weak spots</Item>
+      <Item Id="Messages">$(count) Bottle o' messages</Item>
+    </ItemGroup>
+    <ItemGroup Id="ListHeaders">
+      <Item Id="Message">Bottle o' message</Item>
+      <Item Id="File">Ship part</Item>
+      <Item Id="Line">Line</Item>
+      <Item Id="Column">Column</Item>
+    </ItemGroup>
+    <ItemGroup Id="ContextMenu">
+      <Item Id="Copy">Copy</Item>
+      <Item Id="GotoFile">Go to ship part</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id="ExtensionLoadDialog">
+    <Item Id="Title">Extension load result</Item>
+    <Item Id="LoadedSuccessfully">Be loadin' successfully</Item>
+    <ItemGroup Id="ListHeaders">
+      <Item Id="Extension">Extension</Item>
+      <Item Id="Path">Path</Item>
+      <Item Id="Result">Result</Item>
+    </ItemGroup>
+    <ItemGroup Id="Details">
+      <Item Id="Title">Extension load result</Item>
+      <Item Id="Message">The extension $(extension) be loadin' $(result).&#10;&#13;&#10;&#13;Details:&#10;&#13;$(details)</Item>
+      <Item Id="Successfully">successfully</Item>
+      <Item Id="Unsuccessfully">unsuccessfully</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id="ExtensionsDialog">
+    <Item Id="Title">Extensions</Item>
+    <Item Id="Add.FileFilter">LiteDevelop extension libraries (*.dll)</Item>
+    <Item Id="Remove.Warning">Ye be sure ye want t' remove the library and its extensions?</Item>
+    <Item Id="RestartRequired">In order to complete the operations, you need to restart LiteDevelop. Do you want to restart now?</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="LiteDevelopExtension">
+    <Item Id="GeneralSettings">General</Item>
+    <Item Id="Appearance">Paintwork</Item>
+    <Item Id="InternationalSettings">Across the seven seas</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="GeneralSettingsEditor">
+    <Item Id="DefaultProjectsPath">Default ships' location:</Item>
+    <Item Id="ShowOutput">Show bottle o' messages when buildin' the ship.</Item>
+    <Item Id="ShowErrorList">Show leak list when build failed.</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="MainForm">
+
+    <ItemGroup Id="Messages">
+      <Item Id="NoEditorAvailable">There be no ship builder available to spy "$(file)".</Item>
+      <Item Id="NoDebuggerAvailable">There be no debugger available for project "$(project)".</Item>
+      <Item Id="BuildFailed">One or more ships sunk to Davy Jones locker. See leak list or bottle o' messages for details.</Item>
+      <Item Id="UnloadCurrentSolutionWarning">Ye be sure ye want to abandon yer current navy?</Item>
+      <Item Id="CloseAllDocumentsWarning">Ye be sure ye want to throw overboard all th' opened ship parts?</Item>
+    </ItemGroup>
+
+    <ItemGroup Id="Menu">
+      <ItemGroup Id="File">
+        <Item Id="Title">&amp;File</Item>
+        <Item Id="New">&amp;New</Item>
+        <Item Id="New.NewFile">New ship part</Item>
+        <Item Id="New.NewProject">New ship</Item>
+        <Item Id="Open">&amp;Spy</Item>
+        <Item Id="Save">&amp;Save</Item>
+        <Item Id="SaveAs">Save &amp;as</Item>
+        <Item Id="SaveAll">Save all</Item>
+        <Item Id="Close">Abandon</Item>
+        <Item Id="CloseSolution">Abandon navy</Item>
+        <Item Id="Print">&amp;Print</Item>
+        <Item Id="PrintPreview">Print pre&amp;view</Item>
+        <Item Id="Exit">&amp;Belay</Item>
+      </ItemGroup>
+
+      <ItemGroup Id="Edit">
+        <Item Id="Title">&amp;Mangle</Item>
+        <Item Id="Undo">&amp;Undo</Item>
+        <Item Id="Redo">&amp;Redo</Item>
+        <Item Id="Cut">Cu&amp;t</Item>
+        <Item Id="Copy">&amp;Copy</Item>
+        <Item Id="Paste">&amp;Paste</Item>
+        <Item Id="SelectAll">Select &amp;all</Item>
+      </ItemGroup>
+
+      <ItemGroup Id="View">
+        <Item Id="Title">&amp;View</Item>
+        <Item Id="Toolbox">&amp;Gunnery</Item>
+        <Item Id="SolutionExplorer">&amp;Navy spy</Item>
+        <Item Id="PropertiesWindow">&amp;Properties</Item>
+        <Item Id="ErrorList">&amp;Leak list</Item>
+        <Item Id="OutputWindow">&amp;Bottle o' messages</Item>
+        <Item Id="Fullscreen">&amp;Fullscreen</Item>
+      </ItemGroup>
+
+      <ItemGroup Id="Build">
+        <Item Id="Title">&amp;Arm</Item>
+        <Item Id="BuildSolution">Arm &amp;navy</Item>
+        <Item Id="CleanSolution">&amp;Swab the decks</Item>
+      </ItemGroup>
+
+      <ItemGroup Id="Debug">
+        <Item Id="Title">&amp;Debug</Item>
+        <Item Id="Run">&amp;Fire!</Item>
+        <Item Id="RunWithoutDebugger">Fire &amp;without debuggin'</Item>
+        <Item Id="RunLastBuild">Fire &amp;last used canon balls</Item>
+        <Item Id="Break">&amp;Hold fire!</Item>
+        <Item Id="StopDebugging">&amp;Stop debuggin'</Item>
+        <Item Id="StepOver">Step &amp;over</Item>
+        <Item Id="StepInto">Step &amp;into</Item>
+        <Item Id="StepOut">Step &amp;out</Item>
+      </ItemGroup>
+
+      <ItemGroup Id="Tools">
+        <Item Id="Title">&amp;Tools</Item>
+        <Item Id="Settings">&amp;Settin's</Item>
+        <Item Id="Extensions">&amp;Extensions</Item>
+      </ItemGroup>
+
+      <ItemGroup Id="Window">
+        <Item Id="Title">&amp;Ship part</Item>
+        <Item Id="NextWindow">&amp;Next ship part</Item>
+        <Item Id="PreviousWindow">&amp;Previous ship part</Item>
+        <Item Id="CloseAllDocuments">&amp;Avast! all yer ship parts</Item>
+      </ItemGroup>
+      
+      <ItemGroup Id="Help">
+        <Item Id="Title">&amp;Mayday!</Item>
+        <Item Id="SourceCode">Source code</Item>
+        <Item Id="About">&amp;About</Item>
+      </ItemGroup>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id="OpenWithDialog">
+    <Item Id="Title">Spy with...</Item>
+    <ItemGroup Id ="ListHeaders">
+      <Item Id="Name">Name</Item>
+      <Item Id="Description">Description</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id="OutputContent">
+    <Item Id="Title">Bottle o' messages</Item>
+    <Item Id="ShowOutputFrom">Spy output from:</Item>
+    <Item Id="ClearAll">Clear all</Item>
+    <Item Id="ToggleWordWrap">Toggl' word wrap</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="PropertiesContent">
+    <Item Id="Title">Properties</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="SettingsDialog">
+    <Item Id="Title">Settin's</Item>
+    <Item Id="ResetToDefaults">Reset to defaults</Item>
+    <Item Id="ResetToDefaultsWarning">Ye be sure ye want to reset all the settin's to th' default states?</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="SolutionExplorerContent">
+    <Item Id="Title">Navy spy</Item>
+    <Item Id ="DeleteFileWarning">$(file) will be thrown overboard.</Item>
+
+    <ItemGroup Id ="ContextMenu">
+      <Item Id="Add">Add</Item>
+      <Item Id="Add.NewFile">New ship part</Item>
+      <Item Id="Add.NewDirectory">New deck</Item>
+      <Item Id="Add.NewProject">New ship</Item>
+      <Item Id="Add.ExistingFile">Existing ship part...</Item>
+      <Item Id="Open">Spy</Item>
+      <Item Id="Remove">Throw overboard</Item>
+      <Item Id="Rename">Repaint</Item>
+      <Item Id="SetAsStartupProject">Set as admiral ship</Item>
+      <Item Id="ViewInExplorer">Spy in Explorer</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id="ToolBoxContent">
+    <Item Id="Title">Gunnery</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="UnsavedFilesDialog">
+    <Item Id="Title">Mangled files</Item>
+    <Item Id="Message">Th' following files be havin' mangled data.</Item>
+    <Item Id="SaveSelected">Save selected</Item>
+    <Item Id="DontSave">Throw overboard</Item>
+  </ItemGroup>
+
+  <!-- 
+  ==================================
+  Framework library (TODO)
+  ==================================
+  -->
+
+</UILanguagePack>

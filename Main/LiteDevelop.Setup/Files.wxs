@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      
+      <Directory Id="ProgramMenuFolder">
+
+        <Directory Id="ApplicationProgramsFolder" Name="LiteDevelop">
+          <Component Id="ApplicationShortcut" Guid="{DD4479D9-3126-4197-B2AE-EE435EF2C1EC}">
+            <Shortcut Id="ApplicationStartMenuShortcut"
+                      Name="LiteDevelop"
+                      Description="LiteDevelop Free and Open-Source IDE."
+                      Target="[#LiteDevelop.exe]"
+                      WorkingDirectory="APPLICATIONROOTDIRECTORY" />
+            <RemoveFolder Id="ApplicationProgramsFolder" On="uninstall"/>
+            <RegistryValue Root="HKCU" Key="Software\Jerre S.\LiteDevelop" Name="installed" Type="integer" Value="1" KeyPath="yes"/>
+          </Component>
+
+        </Directory>
+      </Directory>
+      
+      <Directory Id="ProgramFilesFolder" Name="PFiles">
+        <Directory Id="INSTALLDIR" Name="LiteDevelop">
+          
+          <!-- Root directory files -->
+          <Component Id = "LicenseRtf" Guid = "{8E6DADA9-05D2-420F-B982-4A75A2816A89}">
+            <File Id="License.rtf" Source ="$(var.SolutionDir)\License.rtf" KeyPath="yes" />
+          </Component>
+          <Component Id = "LiteDevelopExe" Guid = "{648FADA3-32C7-4806-8B25-AB68413268EB}">
+            <File Id="LiteDevelop.exe" Source ="$(var.LiteDevelop.TargetPath)" KeyPath="yes" />
+          </Component>
+          <Component Id = "LiteDevelopPdb" Guid = "{1A624E57-8E8F-47AE-998F-6CE5AD3F9372}">
+            <File Source ="$(var.LiteDevelop.TargetDir)\LiteDevelop.pdb" KeyPath="yes" />
+          </Component>
+          <Component Id = "LiteDevelopFrameworkDll" Guid = "{FB75FEA1-DC91-4AD4-990D-C154B7721FDB}">
+            <File Source ="$(var.LiteDevelop.Framework.TargetPath)" KeyPath="yes" />
+          </Component>
+          <Component Id = "LiteDevelopFrameworkPdb" Guid = "{69E02E5B-A70F-4E05-A5FB-8A2997FA98D8}">
+            <File Source ="$(var.LiteDevelop.Framework.TargetDir)\LiteDevelop.Framework.pdb" KeyPath="yes" />
+          </Component>
+          <Component Id = "LiteDevelopFrameworkXml" Guid = "{86744990-2485-4B43-B21B-359B508553FA}">
+            <File Source ="$(var.LiteDevelop.Framework.TargetDir)\LiteDevelop.Framework.xml" KeyPath="yes" />
+          </Component>
+          <Component Id = "LiteDevelopMSBuildExe" Guid = "{33DBA349-C4DE-4912-AAC3-1BBE6E321AB0}">
+            <File Source ="$(var.LiteDevelop.MSBuild.TargetPath)" KeyPath="yes" />
+          </Component>
+          <Component Id = "LiteDevelopMSBuildPdb" Guid = "{C9298FAB-A7CD-44AC-86E8-DB6AA7E38FCA}">
+            <File Source ="$(var.LiteDevelop.MSBuild.TargetDir)\LiteDevelop.MSBuild.pdb" KeyPath="yes" />
+          </Component>
+          <Component Id = "DockPanelSuiteDll" Guid = "{616041D7-D5EF-4439-8470-81D37F6E102C}">
+            <File Source ="$(var.LiteDevelop.TargetDir)\WeifenLuo.WinFormsUI.Docking.dll" KeyPath="yes" />
+          </Component>
+
+          <Component Id = "MainAppDefaultAppearanceXml" Guid = "{AC17976A-D5AE-461D-A59E-C671EAD8E72F}">
+            <File Id = "mainapp_default_appearance.xml"  Source = "$(var.LiteDevelop.TargetDir)\default_appearance.xml" KeyPath = "yes" />
+          </Component>
+          <Component Id = "MainAppDefaultSettingsXml" Guid = "{91944C46-7381-4A10-8D15-A72ED1471A44}">
+            <File Id = "mainapp_default_settubg.xml"  Source = "$(var.LiteDevelop.TargetDir)\default_settings.xml" KeyPath = "yes" />
+          </Component>
+
+          <Directory Id="HelpFolder" Name="Help">
+            <Component Id = "LiteDevelopFrameworkChm" Guid = "{B122A0BF-6D18-4652-A435-57B6A3DD2705}">
+              <File Source ="$(var.LiteDevelop.Framework.TargetDir)\Help\LiteDevelop.Framework.chm" KeyPath="yes" />
+            </Component>
+          </Directory>
+          
+          <!-- Main App Mui files -->
+          <Directory Id="MuiFolder" Name="Mui">
+            <Component Id = "LanguagesXml" Guid ="{B2301D52-F601-4F26-88C1-7AC6BD631B6A}">
+              <File Id = "languages.xml" Source ="$(var.LiteDevelop.TargetDir)\Mui\languages.xml" KeyPath="yes" />
+            </Component>
+              
+            <Component Id = "MainAppDutchMuiFile" Guid ="{196C38A3-DAC3-403F-88DB-D3550C5D6F10}">
+              <File Id = "mainapp_dutch.xml" Source ="$(var.LiteDevelop.TargetDir)\Mui\dutch.xml" KeyPath="yes" />
+            </Component>
+            <Component Id = "MainAppEnglishMuiFile" Guid ="{E1954D25-FB78-4985-8011-8D1F2504D2D1}">
+              <File Id = "mainapp_english.xml" Source ="$(var.LiteDevelop.TargetDir)\Mui\english.xml" KeyPath="yes" />
+            </Component>
+            <!--
+            <Component Id = "MainAppFinnishMuiFile" Guid ="{8D720C9B-B775-4BC2-8BCF-DD12D363F5C7}">
+              <File Id = "mainapp_finnish.xml" Source ="$(var.LiteDevelop.TargetDir)\Mui\finnish.xml" KeyPath="yes" />
+            </Component>
+            <Component Id = "MainAppFrenchMuiFile" Guid ="{C623B2E3-A416-416C-8B11-9F4BA4E32206}">
+              <File Id = "mainapp_french.xml" Source ="$(var.LiteDevelop.TargetDir)\Mui\french.xml" KeyPath="yes" />
+            </Component>
+            <Component Id = "MainAppGermanMuiFile" Guid ="{23CFB27D-CAA4-4CFD-86BD-AFA118F8B265}">
+              <File Id = "mainapp_german.xml" Source ="$(var.LiteDevelop.TargetDir)\Mui\german.xml" KeyPath="yes" />
+            </Component>
+            <Component Id = "MainAppNorwegianMuiFile" Guid ="{EC585D25-5306-400D-98DC-E51660F5AF3D}">
+              <File Id = "mainapp_norwegian.xml" Source ="$(var.LiteDevelop.TargetDir)\Mui\norwegian.xml" KeyPath="yes" />
+            </Component>
+            <Component Id = "MainAppSpanishMuiFile" Guid ="{9B8DCAA2-1CA2-46C8-ADC8-419F7640A1D6}">
+              <File Id = "mainapp_spanish.xml" Source ="$(var.LiteDevelop.TargetDir)\Mui\spanish.xml" KeyPath="yes" />
+            </Component>
+            <Component Id = "MainAppSwedishMuiFile" Guid ="{DE0C2406-B1DA-47B4-B111-D0FE1DE28722}">
+              <File Id = "mainapp_swedish.xml" Source ="$(var.LiteDevelop.TargetDir)\Mui\swedish.xml" KeyPath="yes" />
+            </Component>
+            -->
+            <Component Id = "MainAppPirateTalkMuiFile" Guid ="{EC790002-480D-49CB-9A37-AF117C37D7FA}">
+              <File Id = "mainapp_pirate_talk.xml" Source ="$(var.LiteDevelop.TargetDir)\Mui\pirate.xml" KeyPath="yes" />
+            </Component>
+            <!--
+            <Component Id = "MainAppRussianMuiFile" Guid ="{3363C113-2FFA-4933-A940-AB6049B0602B}">
+              <File Id = "mainapp_russian.xml" Source ="$(var.LiteDevelop.TargetDir)\Mui\russian.xml" KeyPath="yes" />
+            </Component>
+            -->
+          </Directory>
+          
+          <!-- Extension files -->
+          <Directory Id="ExtensionsFolder" Name="Extensions">
+            <Directory Id="EssentialsFolder" Name="Essentials">
+              
+              <!-- Assembly files -->
+              <Component Id = "LiteDevelopEssentialsDll" Guid = "{BD3A872E-118A-40C1-8177-97C86B48F0BF}">
+                <File Source ="$(var.LiteDevelop.Essentials.TargetPath)" KeyPath="yes" />
+              </Component>
+              <Component Id = "LiteDevelopEssentialsPdb" Guid = "{3409EB93-A4F3-4341-B739-A09152E322C4}">
+                <File Source ="$(var.LiteDevelop.Essentials.TargetDir)\LiteDevelop.Essentials.pdb" KeyPath="yes" />
+              </Component>
+              <Component Id = "FastColoredTextBoxDll" Guid = "{815D184B-C30E-4BB3-80F8-9976DA49EC02}">
+                <File Source ="$(var.FastColoredTextBox.TargetPath)" KeyPath="yes" />
+              </Component>
+              <Component Id = "FastColoredTextBoxPdb" Guid = "{7F3FA4CE-CB9A-4CFA-A89B-5C85FE1FA0BF}">
+                <File Source ="$(var.FastColoredTextBox.TargetDir)\FastColoredTextBox.pdb" KeyPath="yes" />
+              </Component>
+              <Component Id = "FastColoredTextBoxXml" Guid = "{31AF32E2-0F8F-4C9A-968E-03A297881DCA}">
+                <File Source ="$(var.FastColoredTextBox.TargetDir)\FastColoredTextBox.xml" KeyPath="yes" />
+              </Component>
+          
+              <Directory Id="EssentialsCodeEditorFolder" Name ="CodeEditor">
+                <Component Id = "CodeEditorDefaultAppearanceXml" Guid = "{F2CC8270-AAEB-4596-BB13-D6058ABF9F23}">
+                  <File Id = "codeeditor_default_appearance.xml" Source = "$(var.LiteDevelop.Essentials.TargetDir)\CodeEditor\default_appearance.xml" KeyPath = "yes" />
+                </Component>
+                <Component Id = "CodeEditorDefaultSettingsXml" Guid = "{50AF4AAC-C441-41BB-8033-345A72449022}">
+                  <File Id = "codeeditor_default_settings.xml" Source = "$(var.LiteDevelop.Essentials.TargetDir)\CodeEditor\default_settings.xml" KeyPath = "yes" />
+                </Component>
+              </Directory>
+              
+              <!-- Mui files -->
+              <Directory Id="EssentialsMuiFolder" Name ="Mui">
+                <Component Id = "EssentialsDutchMuiFile" Guid ="{99D11CD3-CDB0-48AC-B295-F2D81582B99E}">
+                  <File Id = "essentials_dutch.xml" Source ="$(var.LiteDevelop.Essentials.TargetDir)\Mui\dutch.xml" KeyPath="yes" />
+                </Component>
+                <Component Id = "EssentialsEnglishMuiFile" Guid ="{596434C7-728F-4669-AD34-BEC0BA002243}">
+                  <File Id = "essentials_english.xml" Source ="$(var.LiteDevelop.Essentials.TargetDir)\Mui\english.xml" KeyPath="yes" />
+                </Component>
+                <!--
+                <Component Id = "EssentialsFinnishMuiFile" Guid ="{946568C5-20A1-467C-ADE7-E82CFC264798}">
+                  <File Id = "essentials_finnish.xml" Source ="$(var.LiteDevelop.Essentials.TargetDir)\Mui\finnish.xml" KeyPath="yes" />
+                </Component>
+                <Component Id = "EssentialsFrenchMuiFile" Guid ="{8F7D260D-D339-47CF-986C-96D03E77FC10}">
+                  <File Id = "essentials_french.xml" Source ="$(var.LiteDevelop.Essentials.TargetDir)\Mui\french.xml" KeyPath="yes" />
+                </Component>
+                <Component Id = "EssentialsGermanMuiFile" Guid ="{6EB3526F-2F9A-49A4-BBB0-D8E36E620ADC}">
+                  <File Id = "essentials_german.xml" Source ="$(var.LiteDevelop.Essentials.TargetDir)\Mui\german.xml" KeyPath="yes" />
+                </Component>
+                <Component Id = "EssentialsNorwegianMuiFile" Guid ="{4798DCE3-907F-42E5-8AF6-EA5412F63FF9}">
+                  <File Id = "essentials_norwegian.xml" Source ="$(var.LiteDevelop.Essentials.TargetDir)\Mui\norwegian.xml" KeyPath="yes" />
+                </Component>
+                <Component Id = "EssentialsSpanishMuiFile" Guid ="{9199E103-D233-4938-9EFB-2ED44EF6F0F1}">
+                  <File Id = "essentials_spanish.xml" Source ="$(var.LiteDevelop.Essentials.TargetDir)\Mui\spanish.xml" KeyPath="yes" />
+                </Component>
+                <Component Id = "EssentialsSwedishMuiFile" Guid ="{6CCE049C-343F-477E-A597-85D1BCC0192B}">
+                  <File Id = "essentials_swedish.xml" Source ="$(var.LiteDevelop.Essentials.TargetDir)\Mui\swedish.xml" KeyPath="yes" />
+                </Component>
+                -->
+                <Component Id = "EssentialsPirateTalkMuiFile" Guid ="{4D5B7853-94CC-4960-B401-97E1597EFFC2}">
+                  <File Id = "essentials_pirate_talk.xml" Source ="$(var.LiteDevelop.Essentials.TargetDir)\Mui\pirate.xml" KeyPath="yes" />
+                </Component>
+                <!--
+                <Component Id = "EssentialsRussianMuiFile" Guid ="{FE02B180-3E61-4F60-AE83-B58C7CD1658F}">
+                  <File Id = "essentials_russian.xml" Source ="$(var.LiteDevelop.Essentials.TargetDir)\Mui\russian.xml" KeyPath="yes" />
+                </Component>
+                -->
+              </Directory>
+            </Directory>
+          </Directory>
+
+          <!-- Programming language files -->
+          <Directory Id="LanguagesFolder" Name="Languages">
+            <Directory Id="NetLanguagesFolder" Name="Net">
+              <Component Id = "CSharpLanguageFile" Guid ="{E5A5A8F4-64F8-4A5A-8093-7E69909F6C95}">
+                <File Source ="$(var.LiteDevelop.TargetDir)\Languages\Net\CSharp.xml" KeyPath="yes" />
+              </Component>
+              <Component Id = "VisualBasicLanguageFile" Guid ="{2389B48B-BFF0-4921-960A-9E15770359C7}">
+                <File Source ="$(var.LiteDevelop.TargetDir)\Languages\Net\VisualBasic.xml" KeyPath="yes" />
+              </Component>
+            </Directory>
+            
+            <Directory Id="WebLanguagesFolder" Name="Web">
+              <Component Id = "CssLanguageFile" Guid ="{1DFE1F24-E862-4AE4-847F-09B8950AFFCB}">
+                <File Source ="$(var.LiteDevelop.TargetDir)\Languages\Web\Css.xml" KeyPath="yes" />
+              </Component>
+              <Component Id = "HtmlLanguageFile" Guid ="{5B355E13-D6AC-4717-88AF-AE5A6CF3CFE9}">
+                <File Source ="$(var.LiteDevelop.TargetDir)\Languages\Web\Html.xml" KeyPath="yes" />
+              </Component>
+              <Component Id = "PhpLanguageFile" Guid ="{C4268D8D-5711-4858-A0E5-EAD0B47ABB63}">
+                <File Source ="$(var.LiteDevelop.TargetDir)\Languages\Web\Php.xml" KeyPath="yes" />
+              </Component>
+            </Directory>
+          </Directory>
+          
+        </Directory>
+      </Directory>
+    </Directory>
+	</Fragment>
+</Wix>

@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C969095-9096-4496-892D-70BBFCB29AF8}</ProjectGuid>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LiteDevelop</RootNamespace>
+    <AssemblyName>LiteDevelop</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputType>Exe</OutputType>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <OutputType>WinExe</OutputType>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WeifenLuo.WinFormsUI.Docking, Version=3.0.0.0, Culture=neutral, PublicKeyToken=5cded1a1a0a7b481, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Extensions\BookmarkManager.cs" />
+    <Compile Include="Extensions\ControlManager.cs" />
+    <Compile Include="Extensions\CredentialManager.cs" />
+    <Compile Include="Extensions\ErrorManager.cs" />
+    <Compile Include="Extensions\ExtensionLibraryData.cs" />
+    <Compile Include="Extensions\ExtensionManager.cs" />
+    <Compile Include="Extensions\FileService.cs" />
+    <Compile Include="Extensions\FileServiceOpenedFile.cs" />
+    <Compile Include="Extensions\LiteDevelopExtension.cs" />
+    <Compile Include="Extensions\LiteExtensionHost.cs" />
+    <Compile Include="Extensions\ExtensionSettingsManager.cs" />
+    <Compile Include="Gui\DockContents\OutputProgressReporter.cs" />
+    <Compile Include="Gui\DockContents\SolutionExplorer\AbstractNode.cs" />
+    <Compile Include="Gui\DockContents\SolutionExplorer\DirectoryNode.cs" />
+    <Compile Include="Gui\DockContents\SolutionExplorer\FileNode.cs" />
+    <Compile Include="Gui\DockContents\SolutionExplorer\FileReferenceNode.cs" />
+    <Compile Include="Gui\DockContents\SolutionExplorer\PathNode.cs" />
+    <Compile Include="Gui\DockContents\SolutionExplorer\ProjectNode.cs" />
+    <Compile Include="Gui\DockContents\SolutionExplorer\PropertiesNode.cs" />
+    <Compile Include="Gui\DockContents\SolutionExplorer\ReferencesNode.cs" />
+    <Compile Include="Gui\DockContents\SolutionExplorer\SolutionFolderNode.cs" />
+    <Compile Include="Gui\DockContents\SolutionExplorer\SolutionNode.cs" />
+    <Compile Include="Gui\Forms\AboutDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Forms\AboutDialog.Designer.cs">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Forms\CreateFileDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Forms\CreateFileDialog.Designer.cs">
+      <DependentUpon>CreateFileDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Forms\CreateProjectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Forms\CreateProjectDialog.Designer.cs">
+      <DependentUpon>CreateProjectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Forms\CredentialsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Forms\CredentialsDialog.Designer.cs">
+      <DependentUpon>CredentialsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\DockContents\ErrorContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\DockContents\ErrorContent.Designer.cs">
+      <DependentUpon>ErrorContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Forms\ErrorDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Forms\ErrorDialog.Designer.cs">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Forms\ExtensionLoadDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Forms\ExtensionLoadDialog.Designer.cs">
+      <DependentUpon>ExtensionLoadDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Forms\ExtensionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Forms\ExtensionsDialog.Designer.cs">
+      <DependentUpon>ExtensionsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Settings\AppearanceEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Settings\AppearanceEditor.Designer.cs">
+      <DependentUpon>AppearanceEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Settings\GeneralSettingsEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Settings\GeneralSettingsEditor.Designer.cs">
+      <DependentUpon>GeneralSettingsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Forms\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Forms\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Forms\OpenWithDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Forms\OpenWithDialog.Designer.cs">
+      <DependentUpon>OpenWithDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\DockContents\OutputContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\DockContents\OutputContent.Designer.cs">
+      <DependentUpon>OutputContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\DockContents\PropertiesContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\DockContents\PropertiesContent.Designer.cs">
+      <DependentUpon>PropertiesContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Forms\SettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Forms\SettingsDialog.Designer.cs">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Settings\InternationalSettingsEditor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Gui\Settings\InternationalSettingsEditor.Designer.cs">
+      <DependentUpon>InternationalSettingsEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\DockContents\SolutionExplorer\SolutionExplorerContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\DockContents\SolutionExplorer\SolutionExplorerContent.Designer.cs">
+      <DependentUpon>SolutionExplorerContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Forms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gui\DockContents\ToolboxContent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\DockContents\ToolboxContent.Designer.cs">
+      <DependentUpon>ToolboxContent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalMethods.cs" />
+    <Compile Include="LiteDevelopApplication.cs" />
+    <Compile Include="Gui\NativeToolStripRenderer.cs" />
+    <Compile Include="LiteDevelopSettings.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Gui\Forms\UnsavedFilesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gui\Forms\UnsavedFilesDialog.Designer.cs">
+      <DependentUpon>UnsavedFilesDialog.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Gui\Forms\AboutDialog.resx">
+      <DependentUpon>AboutDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Forms\CreateFileDialog.resx">
+      <DependentUpon>CreateFileDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Forms\CreateProjectDialog.resx">
+      <DependentUpon>CreateProjectDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Forms\CredentialsDialog.resx">
+      <DependentUpon>CredentialsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\DockContents\ErrorContent.resx">
+      <DependentUpon>ErrorContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Forms\ErrorDialog.resx">
+      <DependentUpon>ErrorDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Forms\ExtensionLoadDialog.resx">
+      <DependentUpon>ExtensionLoadDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Forms\ExtensionsDialog.resx">
+      <DependentUpon>ExtensionsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Settings\AppearanceEditor.resx">
+      <DependentUpon>AppearanceEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Settings\GeneralSettingsEditor.resx">
+      <DependentUpon>GeneralSettingsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Forms\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Forms\OpenWithDialog.resx">
+      <DependentUpon>OpenWithDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\DockContents\OutputContent.resx">
+      <DependentUpon>OutputContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\DockContents\PropertiesContent.resx">
+      <DependentUpon>PropertiesContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Forms\SettingsDialog.resx">
+      <DependentUpon>SettingsDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Settings\InternationalSettingsEditor.resx">
+      <DependentUpon>InternationalSettingsEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\DockContents\SolutionExplorer\SolutionExplorerContent.resx">
+      <DependentUpon>SolutionExplorerContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gui\DockContents\ToolboxContent.resx">
+      <DependentUpon>ToolboxContent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Gui\Forms\UnsavedFilesDialog.resx">
+      <DependentUpon>UnsavedFilesDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LiteDevelop.Framework\LiteDevelop.Framework.csproj">
+      <Project>{28fcb063-b56a-4b6e-9b9e-9865ca71d852}</Project>
+      <Name>LiteDevelop.Framework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Splash LiteDev.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pointer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="default_settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="default_appearance.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mui\dutch.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mui\pirate.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mui\english.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Resources\play_empty.png" />
+    <None Include="Resources\play.png" />
+    <None Include="Resources\stop.png" />
+    <None Include="Resources\pause.png" />
+    <None Include="Resources\fullscreen.png" />
+    <None Include="Resources\feather.png" />
+    <None Include="Resources\gear_wheel.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

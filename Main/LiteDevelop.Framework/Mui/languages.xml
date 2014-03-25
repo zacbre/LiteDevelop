@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Languages>
+  <Language name = "Dutch" id = "dutch" />
+  <Language name = "English" id = "english" />
+  <Language name = "Finnish" id = "finnish" />
+  <Language name = "French" id = "french" />
+  <Language name = "German" id = "german" />
+  <Language name = "Norwegian" id = "norwegian" />
+  <Language name = "Spanish" id = "spanish" />
+  <Language name = "Swedish" id = "swedish" />
+  <Language name = "Pirate Talk" id = "pirate" />
+  <Language name = "Russian" id = "russian" />
+</Languages>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <ItemGroup Id="Application">
+    <Item Id="LanguageID">english</Item>
+    <ItemArray Id="Extensions">
+      <Element>Extensions\Essentials\LiteDevelop.Essentials.dll</Element>
+    </ItemArray>
+  </ItemGroup>
+  <ItemGroup Id="MainWindow">
+    <Item Id="Location">100; 100</Item>
+    <Item Id="Size">700; 500</Item>
+    <Item Id="Maximized">true</Item>
+  </ItemGroup>
+  <ItemGroup Id="Projects">
+    <Item Id="DefaultProjectsPath">$(Documents)\LiteDevelop\Projects</Item>
+    <Item Id="ShowOutputWhenBuilding">true</Item>
+    <Item Id="ShowErrorsWhenBuildFailed">true</Item>
+  </ItemGroup>
+  <ItemGroup Id="ErrorList">
+    <Item Id="ErrorsVisible">true</Item>
+    <Item Id="WarningsVisible">true</Item>
+    <Item Id="MessagesVisible">true</Item>
+  </ItemGroup>
+  <ItemGroup Id="OutputWindow">
+    <Item Id="WordWrap">False</Item>
+  </ItemGroup>
+</Settings>

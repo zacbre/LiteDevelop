@@ -1,0 +1,203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1BF221F0-F68C-472A-8543-EC3F3F16B049}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LiteDevelop.Essentials</RootNamespace>
+    <AssemblyName>LiteDevelop.Essentials</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\Bin\Debug\Extensions\Essentials\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>..\..\Bin\Debug\Extensions\Essentials\LiteDevelop.Essentials.XML</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\Bin\Release\Extensions\Essentials\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CodeEditor\Gui\CodeEditorBookmark.cs" />
+    <Compile Include="CodeEditor\Gui\Styles\DynamicTextStyle.cs" />
+    <Compile Include="CodeEditor\Gui\Styles\StyleMap.cs" />
+    <Compile Include="CodeEditor\Syntax\ICodeBlockCompleter.cs" />
+    <Compile Include="CodeEditor\Syntax\Net\CSharpLayoutData.cs" />
+    <Compile Include="CodeEditor\Syntax\Net\VisualBasicLayoutData.cs" />
+    <Compile Include="CodeEditor\Syntax\Web\CssAutoCompletionMap.cs" />
+    <Compile Include="CodeEditor\Syntax\Web\CssLayoutData.cs" />
+    <Compile Include="CodeEditor\Syntax\Web\HtmlAutoCompletionMap.cs" />
+    <Compile Include="CodeEditor\Syntax\AutoCompletionMap.cs" />
+    <Compile Include="CodeEditor\Syntax\CodeEditorAutoCompleteItem.cs" />
+    <Compile Include="CodeEditor\Syntax\Net\CSharpAutoCompletionMap.cs" />
+    <Compile Include="CodeEditor\Syntax\Net\NetAutoCompletionMap.cs" />
+    <Compile Include="CodeEditor\Syntax\Net\VisualBasicAutoCompletionMap.cs" />
+    <Compile Include="CodeEditor\Syntax\Web\HtmlLayoutData.cs" />
+    <Compile Include="CodeEditor\Syntax\Web\PhpAutoCompletionMap.cs" />
+    <Compile Include="CodeEditor\Syntax\Web\PhpLayoutData.cs" />
+    <Compile Include="CodeEditor\Syntax\Web\WebAutoCompletionMap.cs" />
+    <Compile Include="CodeEditor\Syntax\Web\XmlLayoutData.cs" />
+    <Compile Include="CodeEditor\CodeEditorExtension.cs" />
+    <Compile Include="CodeEditor\Gui\CodeEditorContent.cs" />
+    <Compile Include="CodeEditor\EditorLayoutData.cs" />
+    <Compile Include="CodeEditor\Gui\AutoCompleteSettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CodeEditor\Gui\AutoCompleteSettingsControl.Designer.cs">
+      <DependentUpon>AutoCompleteSettingsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeEditor\CodeEditorSettings.cs" />
+    <Compile Include="CodeEditor\Gui\CodeEditorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CodeEditor\Gui\CodeEditorControl.Designer.cs">
+      <DependentUpon>CodeEditorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CodeEditor\Gui\GeneralSettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CodeEditor\Gui\GeneralSettingsControl.Designer.cs">
+      <DependentUpon>GeneralSettingsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsDesigner\DesignerCodeReader.cs" />
+    <Compile Include="FormsDesigner\DesignerCodeWriter.cs" />
+    <Compile Include="FormsDesigner\Gui\ErrorControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormsDesigner\Gui\ErrorControl.Designer.cs">
+      <DependentUpon>ErrorControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormsDesigner\FormsDesignerExtension.cs" />
+    <Compile Include="FormsDesigner\Gui\FormsDesignerContent.cs" />
+    <Compile Include="FormsDesigner\Services\FormsToolBoxBuilder.cs" />
+    <Compile Include="FormsDesigner\Services\EventBindingService.cs" />
+    <Compile Include="FormsDesigner\Services\MenuCommandService.cs" />
+    <Compile Include="FormsDesigner\Services\NameCreationService.cs" />
+    <Compile Include="FormsDesigner\NetFormTemplate.cs" />
+    <Compile Include="FormsDesigner\Services\FormsToolBoxService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Globals.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CodeEditor\Gui\AutoCompleteSettingsControl.resx">
+      <DependentUpon>AutoCompleteSettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeEditor\Gui\CodeEditorControl.resx">
+      <DependentUpon>CodeEditorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CodeEditor\Gui\GeneralSettingsControl.resx">
+      <DependentUpon>GeneralSettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormsDesigner\Gui\ErrorControl.resx">
+      <DependentUpon>ErrorControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\browserIcons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\csharp_file_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vb_file_icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\html.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HtmlPageFile.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\console.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\file_extension_dll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\window_new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\FastColoredTextBox\FastColoredTextBox.csproj">
+      <Project>{6dd14a85-ccfc-4774-bd26-0f5772512319}</Project>
+      <Name>FastColoredTextBox</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Main\LiteDevelop.Framework\LiteDevelop.Framework.csproj">
+      <Project>{28fcb063-b56a-4b6e-9b9e-9865ca71d852}</Project>
+      <Name>LiteDevelop.Framework</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CodeEditor\default_appearance.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="CodeEditor\default_settings.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Mui\dutch.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mui\english.xml">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mui\pirate.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\list.png" />
+    <None Include="Resources\comment_cancel.png" />
+    <None Include="Resources\comment_accept.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

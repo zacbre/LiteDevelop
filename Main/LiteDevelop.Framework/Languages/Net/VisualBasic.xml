@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NetLanguageData>
+  <Modifiers>Public Friend Protected Friend Protected Protected Friend Private Partial Shared Overrides Overridable MustOverride MustInherit NotInheritable ReadOnly WriteOnly Iterator Const Delegate</Modifiers>
+  <MemberIdentifiers>Namespace Class Structure Interface Enum Dim Function Property Sub Event ByVal ByRef</MemberIdentifiers>
+  <Keywords>Imports As Me Get Set New Await Async Yield Return Byte SByte UShort Short UInteger Integer ULong Long Single Double Decimal Nothing GetType If ElseIf Then End Select Case Do While Loop True False SyncLock Using AddHandler RemoveHandler RaiseEvent Handles</Keywords>
+  <TypeAliases>
+    <TypeAlias>
+      <Original>System.UInt16</Original>
+      <NewName>UShort</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.Int16</Original>
+      <NewName>Short</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.UInt32</Original>
+      <NewName>UInteger</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.Int32</Original>
+      <NewName>Integer</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.UInt64</Original>
+      <NewName>ULong</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.Int64</Original>
+      <NewName>Long</NewName>
+    </TypeAlias>
+  </TypeAliases>
+  <Snippets>
+    <Snippet title = "Try">Try&#10;&#13;^&#10;&#13;Catch&#10;&#13;&#10;&#13;End Try</Snippet>
+    <Snippet title = "TryFinally">Try&#10;&#13;^&#10;&#13;Finally&#10;&#13;&#10;&#13;End Try</Snippet>
+    <Snippet title = "TryCatchFinally">Try&#10;&#13;^&#10;&#13;Catch&#10;&#13;&#10;&#13;Finally&#10;&#13;&#10;&#13;End Try</Snippet>
+    <Snippet title = "DoLoop">Do &#10;&#13;^&#10;&#13;Loop While True</Snippet>
+    <Snippet title = "Namespace">Namespace^&#10;&#13;End Namespace</Snippet>
+    <Snippet title = "Class">Class ^&#10;&#13;End Class</Snippet>
+    <Snippet title = "Structure">Structure ^&#10;&#13;End Structure</Snippet>
+    <Snippet title = "Interface">Interface ^&#10;&#13;End Interface</Snippet>
+    <Snippet title = "Enum">Enum ^&#10;&#13;End Enum</Snippet>
+  </Snippets>
+</NetLanguageData>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<AppearanceMap>
+  <Descriptions>
+    <AppearanceDescription Name="Menu" Id="Menu">
+      <ForeColor UseSystemName="True">MenuText</ForeColor>
+      <BackColor UseSystemName="True">Control</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+    <AppearanceDescription Name="Text field" Id="TextBox">
+      <ForeColor UseSystemName="True">MenuText</ForeColor>
+      <BackColor UseSystemName="True">Window</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+    <AppearanceDescription Name="List view" Id="ListView">
+      <ForeColor UseSystemName="True">MenuText</ForeColor>
+      <BackColor UseSystemName="True">Window</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+    <AppearanceDescription Name="Tree view" Id="TreeView">
+      <ForeColor UseSystemName="True">MenuText</ForeColor>
+      <BackColor UseSystemName="True">Window</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+    <AppearanceDescription Name="Window" Id="Window">
+      <ForeColor UseSystemName="True">MenuText</ForeColor>
+      <BackColor UseSystemName="True">Control</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+  </Descriptions>
+</AppearanceMap>

@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{28FCB063-B56A-4B6E-9B9E-9865CA71D852}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LiteDevelop.Framework</RootNamespace>
+    <AssemblyName>LiteDevelop.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>Bin\Debug\LiteDevelop.Framework.xml</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>Bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>Bin\Release\LiteDevelop.Framework.xml</DocumentationFile>
+    <NoWarn>1591</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build" />
+    <Reference Include="Microsoft.Build.Framework" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Web" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ArrayComparer.cs" />
+    <Compile Include="AssemblyIconProvider.cs" />
+    <Compile Include="EmptyEnumerator.cs" />
+    <Compile Include="ErrorIconProvider.cs" />
+    <Compile Include="Extensions\CoreExtension.cs" />
+    <Compile Include="Extensions\CredentialRequest.cs" />
+    <Compile Include="Debugging\BreakpointBookmark.cs" />
+    <Compile Include="Extensions\IAppearanceMapProvider.cs" />
+    <Compile Include="Extensions\IBookmarkManager.cs" />
+    <Compile Include="Extensions\ICredentialManager.cs" />
+    <Compile Include="Extensions\IDebugger.cs" />
+    <Compile Include="Debugging\DebuggerSession.cs" />
+    <Compile Include="Extensions\IExtensionManager.cs" />
+    <Compile Include="Extensions\IFileService.cs" />
+    <Compile Include="Extensions\PropertyContainer.cs" />
+    <Compile Include="FileSystem\Bookmark.cs" />
+    <Compile Include="FileSystem\Net\CSharp\CSharpProjectDescriptor.cs" />
+    <Compile Include="FileSystem\Net\VisualBasic\VisualBasicProjectDescriptor.cs" />
+    <Compile Include="FileSystem\ProjectDescriptor.cs" />
+    <Compile Include="FileSystem\SourceRange.cs" />
+    <Compile Include="Gui\AppearanceDescription.cs" />
+    <Compile Include="Gui\AppearanceMap.cs" />
+    <Compile Include="Gui\AppearanceProcessor.cs" />
+    <Compile Include="Gui\DefaultAppearanceDefinition.cs" />
+    <Compile Include="Gui\LiteToolWindow.cs" />
+    <Compile Include="Gui\LiteViewContent.cs" />
+    <Compile Include="Gui\MenuService.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Extensions\ToolboxService.cs" />
+    <Compile Include="FileSystem\Net\FrameworkDetector.cs" />
+    <Compile Include="FileSystem\Net\FrameworkInstallationType.cs" />
+    <Compile Include="FileSystem\Net\FrameworkVersion.cs" />
+    <Compile Include="FileSystem\SourceLocation.cs" />
+    <Compile Include="FileSystem\TemplateResult.cs" />
+    <Compile Include="FileSystem\FileExceptions.cs" />
+    <Compile Include="FileSystem\FilePath.cs" />
+    <Compile Include="FileSystem\MSBuild\MSBuildInvoker.cs" />
+    <Compile Include="FileSystem\MSBuild\MSBuildProject.cs" />
+    <Compile Include="FileSystem\MSBuild\MSBuildProjectFactory.cs" />
+    <Compile Include="FileSystem\Net\NetAstFileTemplate.cs" />
+    <Compile Include="FileSystem\Net\NetProjectTemplate.cs" />
+    <Compile Include="FileSystem\OpenedFile.cs" />
+    <Compile Include="FileSystem\ProjectEntry.cs" />
+    <Compile Include="FileSystem\SolutionFolder.cs" />
+    <Compile Include="FileSystem\SolutionNode.cs" />
+    <Compile Include="FileSystem\SolutionReader.cs" />
+    <Compile Include="FileSystem\SolutionSection.cs" />
+    <Compile Include="FileSystem\SolutionWriter.cs" />
+    <Compile Include="FileSystem\SolutionVersion.cs" />
+    <Compile Include="FileSystem\SolutionSettings.cs" />
+    <Compile Include="FileSystem\SourceFileTemplate.cs" />
+    <Compile Include="IProgressReporter.cs" />
+    <Compile Include="Languages\Net\NetLanguageData.cs" />
+    <Compile Include="Languages\SnapshotMemberComparers.cs" />
+    <Compile Include="Languages\Web\WebLanguageData.cs" />
+    <Compile Include="Languages\Web\WebLanguageDescriptor.cs" />
+    <Compile Include="Languages\Web\XmlLanguage.cs" />
+    <Compile Include="Mui\MuiProcessor.cs" />
+    <Compile Include="ProgressReporterCollection.cs" />
+    <Compile Include="SettingsMap.cs" />
+    <Compile Include="SolutionExplorerIconProvider.cs" />
+    <Compile Include="Extensions\ISourceNavigator.cs" />
+    <Compile Include="Extensions\IErrorManager.cs" />
+    <Compile Include="Extensions\ISettingsManager.cs" />
+    <Compile Include="Extensions\ISettingsProvider.cs" />
+    <Compile Include="Gui\SettingsNode.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileSystem\FileTemplate.cs" />
+    <Compile Include="FileSystem\IFileReferenceProvider.cs" />
+    <Compile Include="FileSystem\BuildError.cs" />
+    <Compile Include="FileSystem\BuildResult.cs" />
+    <Compile Include="FileSystem\IFilePathProvider.cs" />
+    <Compile Include="FileSystem\ISavableFile.cs" />
+    <Compile Include="FileSystem\Net\AddReferenceDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileSystem\Net\AddReferenceDialog.Designer.cs">
+      <DependentUpon>AddReferenceDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileSystem\Net\CSharp\CSharpProject.cs" />
+    <Compile Include="FileSystem\Net\VisualBasic\VisualBasicProject.cs" />
+    <Compile Include="FileSystem\Net\NetProject.cs" />
+    <Compile Include="FileSystem\Net\NetProjectSettingsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FileSystem\Net\NetProjectSettingsControl.Designer.cs">
+      <DependentUpon>NetProjectSettingsControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileSystem\ProjectTemplate.cs" />
+    <Compile Include="IconProvider.cs" />
+    <Compile Include="Languages\Net\CodeDomUnitFactory.cs" />
+    <Compile Include="Languages\Web\PhpLanguage.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SubSystem.cs" />
+    <Compile Include="FileSystem\Template.cs" />
+    <Compile Include="Languages\ISnapshotProvider.cs" />
+    <Compile Include="Languages\Net\CodeDomPropertySerializer.cs" />
+    <Compile Include="Languages\Net\NetSnapshotMember.cs" />
+    <Compile Include="Languages\Net\CSharpSourceSnapshot.cs" />
+    <Compile Include="Languages\Net\NetSourceSnapshot.cs" />
+    <Compile Include="Languages\Net\VisualBasicSourceSnapshot.cs" />
+    <Compile Include="Languages\PlainTextLanguage.cs" />
+    <Compile Include="Languages\SnapshotMember.cs" />
+    <Compile Include="Languages\SourceSnapshot.cs" />
+    <Compile Include="Languages\Snippet.cs" />
+    <Compile Include="Languages\Net\CodeDomTypeFormatter.cs" />
+    <Compile Include="EventBasedCollection.cs" />
+    <Compile Include="FileSystem\FileEvents.cs" />
+    <Compile Include="Extensions\IClipboardHandler.cs" />
+    <Compile Include="Extensions\IFileHandler.cs" />
+    <Compile Include="Extensions\IHistoryProvider.cs" />
+    <Compile Include="FileSystem\Project.cs" />
+    <Compile Include="Extensions\IControlManager.cs" />
+    <Compile Include="Extensions\ILiteExtensionHost.cs" />
+    <Compile Include="Gui\LiteDocumentContent.cs" />
+    <Compile Include="Extensions\LiteExtension.cs" />
+    <Compile Include="FileSystem\Solution.cs" />
+    <Compile Include="FileSystem\ProjectFileEntry.cs" />
+    <Compile Include="Languages\Net\CSharpLanguage.cs" />
+    <Compile Include="Languages\LanguageDescriptor.cs" />
+    <Compile Include="Languages\Net\NetLanguageDescriptor.cs" />
+    <Compile Include="Languages\Net\VisualBasicLanguage.cs" />
+    <Compile Include="Languages\Web\CssLanguage.cs" />
+    <Compile Include="Languages\Web\HtmlLanguage.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GlobalMethods.cs" />
+    <Compile Include="Mui\UILanguage.cs" />
+    <Compile Include="Mui\UILanguagePack.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FileSystem\Net\NetProjectSettingsControl.resx">
+      <DependentUpon>NetProjectSettingsControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileSystem\Net\AddReferenceDialog.resx">
+      <DependentUpon>AddReferenceDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Help\LiteDevelop.Framework.chm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\browserIcons.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\config.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Languages\Net\CSharp.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Languages\Net\VisualBasic.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Languages\Web\Css.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Languages\Web\Html.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Languages\Web\Php.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Mui\languages.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\error.png" />
+    <None Include="Resources\correct.png" />
+    <None Include="Resources\warning.png" />
+    <None Include="Resources\info.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

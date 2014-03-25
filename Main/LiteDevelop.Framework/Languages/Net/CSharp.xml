@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<NetLanguageData>
+  <Modifiers>public internal protected internal protected protected internal private partial static virtual abstract override sealed readonly const delegate</Modifiers>
+  <MemberIdentifiers>namespace class struct interface enum var event</MemberIdentifiers>
+  <Keywords>using get set this base new as is try catch finally stackalloc sizeof await async lock switch case break yield return object void byte sbyte ushort short uint int ulong long float double decimal string char bool if else goto do while for foreach true false null typeof</Keywords>
+  <TypeAliases>
+    <TypeAlias>
+      <Original>System.Object</Original>
+      <NewName>object</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.Void</Original>
+      <NewName>void</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.Byte</Original>
+      <NewName>byte</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.SByte</Original>
+      <NewName>sbyte</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.UInt16</Original>
+      <NewName>ushort</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.Int16</Original>
+      <NewName>short</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.UInt32</Original>
+      <NewName>uint</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.Int32</Original>
+      <NewName>int</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.UInt64</Original>
+      <NewName>ulong</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.Int64</Original>
+      <NewName>long</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.Single</Original>
+      <NewName>float</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.Double</Original>
+      <NewName>double</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.Decimal</Original>
+      <NewName>decimal</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.String</Original>
+      <NewName>string</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.Char</Original>
+      <NewName>char</NewName>
+    </TypeAlias>
+    <TypeAlias>
+      <Original>System.Boolean</Original>
+      <NewName>bool</NewName>
+    </TypeAlias>
+  </TypeAliases>
+  <Snippets>
+    <Snippet title = "try">try&#10;&#13;{&#10;&#13;^&#10;&#13;}</Snippet>
+    <Snippet title = "trycatch">try&#10;&#13;{&#10;&#13;^&#10;&#13;}&#10;&#13;catch&#10;&#13;{&#10;&#13;&#10;&#13;}</Snippet>
+    <Snippet title = "tryfinally">try&#10;&#13;{&#10;&#13;^&#10;&#13;}&#10;&#13;finally&#10;&#13;{&#10;&#13;&#10;&#13;}</Snippet>
+    <Snippet title = "trycatchfinally">try&#10;&#13;{&#10;&#13;^&#10;&#13;}&#10;&#13;catch&#10;&#13;{&#10;&#13;&#10;&#13;}&#10;&#13;finally&#10;&#13;{&#10;&#13;&#10;&#13;}</Snippet>
+    <Snippet title = "do">do&#10;&#13;{&#10;&#13;^&#10;&#13;} while (true);</Snippet>
+  </Snippets>
+</NetLanguageData>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<UILanguagePack>
+
+  <!-- 
+  ==================================
+  Code editor 
+  ==================================
+  -->
+
+  <ItemGroup Id = "CodeEditorControl">
+    <ItemGroup Id = "ContextMenu">
+      <Item Id = "Cut">Knippen</Item>
+      <Item Id = "Copy">Kopiëren</Item>
+      <Item Id = "Paste">Plakken</Item>
+      <Item Id = "SelectAll">Alles selecteren</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id = "CodeEditorExtension">
+    <Item Id = "GeneralSettings">Algemeen</Item>
+    <Item Id = "AutoCompleteSettings">Auto completion</Item>
+    <ItemGroup Id = "Toolbar">
+      <Item Id = "ShowSuggestions">Laat suggesties zien</Item>
+      <Item Id = "CommentRegion">Voeg in commentaar voorvoegsels</Item>
+      <Item Id = "UncommendRegion">Verwijder commentaar voorvoegsels</Item>
+    </ItemGroup>
+    <ItemGroup Id = "Statusbar">
+      <Item Id = "CurrentLine">Lijn $(line)</Item>
+      <Item Id = "CurrentColumn">Kolom $(column)</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id = "GeneralSettingsControl">
+    <Item Id = "ShowLineNumbers">Toon regelnummers</Item>
+    <Item Id = "WordWrap">Automatische terugloop</Item>
+    <Item Id = "SyntaxHighlighting">Syntax markeringen</Item>
+    <Item Id = "TrackUnsavedChanges">Houd niet-opgeslagen veranderingen bij</Item>
+    <Item Id = "HighlightCurrentLine">Markeer huIdige regel</Item>
+    <Item Id = "ShowDocumentMiniMap">Toon document miniatuur</Item>
+  </ItemGroup>
+
+  <ItemGroup Id = "AutoCompleteSettingsControl">
+    <ItemGroup Id = "AutoListMembers">
+      <Item Id = "Title">Verzamel en toon suggesties</Item>
+      <ItemGroup Id = "PopupTime">
+        <Item Id = "Title">Toon suggesties als:</Item>
+        <Item Id = "TypingAnyChar">er een karakter wordt getypt</Item>
+        <Item Id = "PressingCtrlSpace">er op Ctrl+Spatie wordt gedrukt</Item>
+      </ItemGroup>
+      <Item Id = "CommitItemOnKeyChars">Voeg in item als er op één van de volgende toetsen wordt gedrukt:</Item>
+      <Item Id = "CommitItemOnSpaceBar">Voeg in item als er op de spatiebalk wordt gedrukt</Item>
+    </ItemGroup>
+    <Item Id = "AutoCompleteCodeBlocks">Completeer code blokken (Bijvoorbeeld ( ) [ ] " " ' ')</Item>
+    <Item Id = "AutoAddParantheses">Voeg haakjes toe wanneer er een methode suggestie wordt ingevoerd.</Item>
+  </ItemGroup>
+
+</UILanguagePack>

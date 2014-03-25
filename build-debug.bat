@@ -1,0 +1,1 @@
+"%windir%\Microsoft.NET\Framework\v4.0.30319\msbuild.exe" "%~dp0\LiteDevelop.sln" /t:Build /p:Configuration=Debug "/p:Platform=Any CPU"

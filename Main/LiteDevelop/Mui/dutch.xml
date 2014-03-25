@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<UILanguagePack>
+
+  <!-- 
+  ==================================
+  Main application 
+  ==================================
+  -->
+  
+  <ItemGroup Id="Common">
+    <Item Id="Ok">Ok</Item>
+    <Item Id="Close">Sluiten</Item>
+    <Item Id="Cancel">Annuleren</Item>
+    <Item Id="Yes">Ja</Item>
+    <Item Id="No">Nee</Item>
+    <Item Id="Add">Toevoegen</Item>
+    <Item Id="Remove">Verwijderen</Item>
+    <Item Id="Browse">Bladeren</Item>
+    <Item Id="None">Geen</Item>
+    <Item Id="Name">Naam:</Item>
+    <Item Id="Directory">Map:</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="AboutDialog">
+    <Item Id="Title">Over</Item>
+    <Item Id="ProjectFounder">Project oprichter:</Item>
+    <Item Id="Version">Versie:</Item>
+    <Item Id="Repository">Github repository:</Item>
+    <ItemGroup Id="ModuleListHeaders">
+      <Item Id="Module">Module</Item>
+      <Item Id="Version">Versie</Item>
+    </ItemGroup>
+    <ItemGroup Id="ExtensionDetails">
+      <Item Id="Name">Naam</Item>
+      <Item Id="Version">Versie</Item>
+      <Item Id="Path">Bestandspad</Item>
+      <Item Id="Author">Auteur</Item>
+      <Item Id="Description">Beschrijving</Item>
+      <Item Id="Copyright">Copyright</Item>
+      <Item Id="AdditionalReleaseInformation">Aanvullende release-informatie</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id="AppearanceEditor">
+    <Item Id="Extensions">Extensies</Item>
+
+    <ItemGroup Id="ListHeaders">
+      <Item Id="Key">Sleutel</Item>
+      <Item Id="Preview">Voorbeeld</Item>
+    </ItemGroup>
+
+    <ItemGroup Id="Editor">
+      <Item Id="ForeColor">Voorgrond:</Item>
+      <Item Id="BackColor">Achtergrond:</Item>
+      <Item Id="Transparent">Transparant</Item>
+      <Item Id="Bold">Vetgedrukt</Item>
+      <Item Id="Italic">Schuingedrukt</Item>
+      <Item Id="Underline">Onderstrepen</Item>
+      <Item Id="Strikeout">Doorhalen</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id="CreateFileDialog">
+    <Item Id="Title">Nieuw bestand maken</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="CreateProjectDialog">
+    <Item Id="Title">Nieuw project maken</Item>
+    <Item Id="FolderAlreadyExists">$(folder) bestaat al. Wilt u doorgaan?</Item>
+    <Item Id="FileAlreadyExists">$(file) bestaat al. Overschrijven?</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="ErrorContent">
+    <Item Id="Title">Foutmeldingen</Item>
+    <ItemGroup Id ="Toolbar">
+      <Item Id="Errors">$(count) Fouten</Item>
+      <Item Id="Warnings">$(count) Waarschuwingen</Item>
+      <Item Id="Messages">$(count) Berichten</Item>
+    </ItemGroup>
+    <ItemGroup Id="ListHeaders">
+      <Item Id="Message">Bericht</Item>
+      <Item Id="File">Bestand</Item>
+      <Item Id="Line">Lijn</Item>
+      <Item Id="Column">Kolom</Item>
+    </ItemGroup>
+    <ItemGroup Id="ContextMenu">
+      <Item Id="Copy">Kopiëren</Item>
+      <Item Id="GotoFile">Ga naar bestand</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id="ExtensionLoadDialog">
+    <Item Id="Title">Extension laad resultaat</Item>
+    <Item Id="LoadedSuccessfully">Succesvol geladen</Item>
+    <ItemGroup Id="ListHeaders">
+      <Item Id="Extension">Extensie</Item>
+      <Item Id="Path">Pad</Item>
+      <Item Id="Result">Resultaat</Item>
+    </ItemGroup>
+    <ItemGroup Id="Details">
+      <Item Id="Title">Extension laad resultaat</Item>
+      <Item Id="Message">De extensie $(extension) is $(result) geladen.&#10;&#13;&#10;&#13;Details:&#10;&#13;$(details)</Item>
+      <Item Id="Successfully">succesvol</Item>
+      <Item Id="Unsuccessfully">onsuccesvol</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id="ExtensionsDialog">
+    <Item Id="Title">Extensions</Item>
+    <Item Id="Add.FileFilter">LiteDevelop extensie bibliotheken (*.dll)</Item>
+    <Item Id="Remove.Warning">Weet u zeker dat u de bibliotheek en alle bijbehorende extensies wilt verwijderen?</Item>
+    <Item Id="RestartRequired">Om de operatie te voltooien, moet LiteDevelop herstart worden. Wilt u nu herstarten?</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="LiteDevelopExtension">
+    <Item Id="GeneralSettings">Algemeen</Item>
+    <Item Id="Appearance">Vormgeving</Item>
+    <Item Id="InternationalSettings">Internationaal</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="GeneralSettingsEditor">
+    <Item Id="DefaultProjectsPath">Standaard bestandspad voor projecten:</Item>
+    <Item Id="ShowOutput">Laat output scherm zien als solution wordt gebouwd.</Item>
+    <Item Id="ShowErrorList">Laat foutmeldingen scherm zien als bouwen mislukt.</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="MainForm">
+
+    <ItemGroup Id="Messages">
+      <Item Id="NoEditorAvailable">Er is geen editor beschikbaar voor bestand "$(file)".</Item>
+      <Item Id="NoDebuggerAvailable">Er is geen foutopsoringsprogramma beschikbaar voor project "$(project)".</Item>
+      <Item Id="BuildFailed">Eén of meerdere bouw-processen zijn mislukt. Zie het output scherm of de foutmeldingen voor details.</Item>
+      <Item Id="UnloadCurrentSolutionWarning">Weet u zeker dat u de huIdige solution wilt sluiten?</Item>
+      <Item Id="CloseAllDocumentsWarning">Weet u zeker dat u de geopende documenten wilt sluiten?</Item>
+    </ItemGroup>
+
+    <ItemGroup Id="Menu">
+      <ItemGroup Id="File">
+        <Item Id="Title">&amp;Bestand</Item>
+        <Item Id="New">&amp;Nieuw</Item>
+        <Item Id="New.NewFile">Nieuw bestand</Item>
+        <Item Id="New.NewProject">Nieuw project</Item>
+        <Item Id="Open">&amp;Openen</Item>
+        <Item Id="Save">Op&amp;slaan</Item>
+        <Item Id="SaveAs">Opslaa&amp;n als</Item>
+        <Item Id="SaveAll">Alles opslaan</Item>
+        <Item Id="Close">Sluiten</Item>
+        <Item Id="CloseSolution">Solution sluiten</Item>
+        <Item Id="Print">&amp;Printen</Item>
+        <Item Id="PrintPreview">Print&amp;voorbeeld</Item>
+        <Item Id="Exit">Afslui&amp;ten</Item>
+      </ItemGroup>
+
+      <ItemGroup Id="Edit">
+        <Item Id="Title">Be&amp;werken</Item>
+        <Item Id="Undo">&amp;Ongedaan maken</Item>
+        <Item Id="Redo">&amp;Terug zetten</Item>
+        <Item Id="Cut">K&amp;nippen</Item>
+        <Item Id="Copy">&amp;Kopiëren</Item>
+        <Item Id="Paste">&amp;Plakken</Item>
+        <Item Id="SelectAll">Alles &amp;selecteren</Item>
+      </ItemGroup>
+
+      <ItemGroup Id="View">
+        <Item Id="Title">B&amp;eeld</Item>
+        <Item Id="Toolbox">&amp;Werkbalk</Item>
+        <Item Id="SolutionExplorer">&amp;Solution verkenner</Item>
+        <Item Id="PropertiesWindow">&amp;Eigenschappen</Item>
+        <Item Id="ErrorList">&amp;Foutmeldingen</Item>
+        <Item Id="OutputWindow">&amp;Uitvoer</Item>
+        <Item Id="Fullscreen">&amp;Volledig scherm</Item>
+      </ItemGroup>
+
+      <ItemGroup Id="Build">
+        <Item Id="Title">Bou&amp;wen</Item>
+        <Item Id="BuildSolution">&amp;Bouw solution</Item>
+        <Item Id="CleanSolution">Solution &amp;opschonen</Item>
+      </ItemGroup>
+
+      <ItemGroup Id="Debug">
+        <Item Id="Title">&amp;Foutopsporing</Item>
+        <Item Id="Run">&amp;Uitvoeren</Item>
+        <Item Id="RunWithoutDebugger">Uitvoeren &amp;zonder foutopsporing</Item>
+        <Item Id="RunLastBuild">Voer &amp;laatste bouw uit</Item>
+        <Item Id="Break">Onder&amp;breken</Item>
+        <Item Id="StopDebugging">&amp;Stop foutopsporing</Item>
+        <Item Id="StepOver">Stap &amp;over</Item>
+        <Item Id="StepInto">Stap &amp;in</Item>
+        <Item Id="StepOut">Stap &amp;uit</Item>
+      </ItemGroup>
+
+      <ItemGroup Id="Tools">
+        <Item Id="Title">&amp;Tools</Item>
+        <Item Id="Settings">&amp;Instellingen</Item>
+        <Item Id="Extensions">&amp;Extensies</Item>
+      </ItemGroup>
+
+      <ItemGroup Id="Window">
+        <Item Id="Title">&amp;Venster</Item>
+        <Item Id="NextWindow">&amp;Volgend scherm</Item>
+        <Item Id="PreviousWindow">&amp;Vorig scherm</Item>
+        <Item Id="CloseAllDocuments">&amp;Sluit alle documenten</Item>
+      </ItemGroup>
+
+      <ItemGroup Id="Help">
+        <Item Id="Title">&amp;Help</Item>
+        <Item Id="SourceCode">Bron code</Item>
+        <Item Id="About">&amp;Over</Item>
+      </ItemGroup>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id="OpenWithDialog">
+    <Item Id="Title">Openen met...</Item>
+    <ItemGroup Id ="ListHeaders">
+      <Item Id="Name">Naam</Item>
+      <Item Id="Description">Beschrijving</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id="OutputContent">
+    <Item Id="Title">Uitvoer</Item>
+    <Item Id="ShowOutputFrom">Toon uitvoer van:</Item>
+    <Item Id="ClearAll">Alles verwijderen</Item>
+    <Item Id="ToggleWordWrap">Automatische terugloop</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="PropertiesContent">
+    <Item Id="Title">Eigenschappen</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="SettingsDialog">
+    <Item Id="Title">Instellingen</Item>
+    <Item Id="ResetToDefaults">Standaardwaarden herstellen</Item>
+    <Item Id="ResetToDefaultsWarning">Weet u zeker dat u de standaardwaarden van de instellingen wilt herstellen?</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="SolutionExplorerContent">
+    <Item Id="Title">Solution verkenner</Item>
+    <Item Id ="DeleteFileWarning">$(file) wordt permanent verwijderd.</Item>
+
+    <ItemGroup Id ="ContextMenu">
+      <Item Id="Add">Toevoegen</Item>
+      <Item Id="Add.NewFile">Nieuw item</Item>
+      <Item Id="Add.NewDirectory">Nieuwe map</Item>
+      <Item Id="Add.NewProject">Nieuw project</Item>
+      <Item Id="Add.ExistingFile">Bestaand item...</Item>
+      <Item Id="Open">Openen</Item>
+      <Item Id="Remove">Verwijderen</Item>
+      <Item Id="Rename">Hernoemen</Item>
+      <Item Id="SetAsStartupProject">Als opstart project instellen</Item>
+      <Item Id="ViewInExplorer">In Explorer openen</Item>
+    </ItemGroup>
+  </ItemGroup>
+
+  <ItemGroup Id="ToolBoxContent">
+    <Item Id="Title">Werkbalk</Item>
+  </ItemGroup>
+
+  <ItemGroup Id="UnsavedFilesDialog">
+    <Item Id="Title">Onopgeslagen bestanden</Item>
+    <Item Id="Message">De volgende bestanden bevatten onopgeslagen data.</Item>
+    <Item Id="SaveSelected">Geselecteerden opslaan</Item>
+    <Item Id="DontSave">Niet opslaan</Item>
+  </ItemGroup>
+
+  <!-- 
+  ==================================
+  Framework library (TODO)
+  ==================================
+  -->
+
+</UILanguagePack>

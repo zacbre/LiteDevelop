@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Settings>
+  <ItemGroup Id="General">
+    <Item Id="LineNumbers">True</Item>
+    <Item Id="WordWrap">False</Item>
+    <Item Id="SyntaxHighlighting">True</Item>
+    <Item Id="TrackUnsavedChanges">True</Item>
+    <Item Id="HighlightCurrentLine">True</Item>
+    <Item Id="ShowDocumentMiniMap">True</Item>
+  </ItemGroup>
+  <ItemGroup Id="AutoCompletion">
+    <Item Id="AutoComplete">True</Item>
+    <Item Id="ShowSuggestionsWhenTyping">True</Item>
+    <Item Id="AutoCompleteCommitOnSpaceBar">False</Item>
+    <Item Id="AutoCompleteCommitChars">{}[](),:;+-*/%&amp;|^!~=&lt;&gt;?@#'"\</Item>
+    <Item Id="AutoCompleteCodeBlocks">True</Item>
+    <Item Id="AutoCompleteMethodParantheses">False</Item>
+  </ItemGroup>
+</Settings>

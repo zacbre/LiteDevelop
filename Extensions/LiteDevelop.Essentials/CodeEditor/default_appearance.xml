@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<AppearanceMap>
+  <Descriptions>
+    <AppearanceDescription Name="Plain text" Id="DefaultText">
+      <ForeColor UseSystemName="False">FF000000</ForeColor>
+      <BackColor UseSystemName="False">FFFFFFFF</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+    <AppearanceDescription Name="Keyword" Id="Keyword">
+      <ForeColor UseSystemName="False">FF0000FF</ForeColor>
+      <BackColor UseSystemName="False">00000000</BackColor>
+      <FontStyle>Bold</FontStyle>
+    </AppearanceDescription>
+    <AppearanceDescription Name="String" Id="String">
+      <ForeColor UseSystemName="False">FFA31515</ForeColor>
+      <BackColor UseSystemName="False">00000000</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+    <AppearanceDescription Name="Number" Id="Number">
+      <ForeColor UseSystemName="False">FF000000</ForeColor>
+      <BackColor UseSystemName="False">00000000</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+    <AppearanceDescription Name="Type definition" Id="TypeDefinition">
+      <ForeColor UseSystemName="False">FF1E90FF</ForeColor>
+      <BackColor UseSystemName="False">00000000</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+    <AppearanceDescription Name="Comment" Id="Comment">
+      <ForeColor UseSystemName="False">FF57A64A</ForeColor>
+      <BackColor UseSystemName="False">00000000</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+    <AppearanceDescription Name="Custom attribute" Id="Attribute">
+      <ForeColor UseSystemName="False">FF57A64A</ForeColor>
+      <BackColor UseSystemName="False">00000000</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+    <AppearanceDescription Name="Line numbers" Id="LineNumbers">
+      <ForeColor UseSystemName="False">FF008080</ForeColor>
+      <BackColor UseSystemName="False">FFF5F5F5</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+    <AppearanceDescription Name="Breakpoint" Id="Breakpoint">
+      <ForeColor UseSystemName="False">FFFFFFFF</ForeColor>
+      <BackColor UseSystemName="False">FFC40000</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+    <AppearanceDescription Name="Instruction pointer" Id="InstructionPointer">
+      <ForeColor UseSystemName="False">FF000000</ForeColor>
+      <BackColor UseSystemName="False">FFFFFF00</BackColor>
+      <FontStyle>Regular</FontStyle>
+    </AppearanceDescription>
+  </Descriptions>
+</AppearanceMap>
